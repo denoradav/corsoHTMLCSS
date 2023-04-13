@@ -86,3 +86,20 @@ h3.titolo-pagina{
     margin: 15px;
     box-shadow: 5px 5px 8px #201702 ;
 }
+
+div.p0{
+    padding: 0;
+}
+
+@media screen and (min-width:1260px) {
+    div.prodotti{
+        background-image: url('../img/sfondo.png');
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1260px) {
+    div.prodotti{
+        background-image: url('../img/sfondo-lg.png');
+    }
+}
+

@@ -25,9 +25,30 @@
             </ul>
         </div>  
     </nav>
-
-
-
+    <div class="row">
+        <div class="xl2 lg2"></div>
+        <div class="xl8 lg8">
+            <h3>Panetteria Italia</h3>
+            <p>
+                Telefono: <a href="tel:+39065896671">06/5896671</a><br>
+                E-mail: <a href="mailto:pippo@pippo.it">pippo@pippo.it</a>
+            </p>
+            <hr>
+            <form action="invia.php" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome"><br>
+                <label for="email">E-mail</label>
+                <input type="email" name="email"><br>
+                <label for="tel">Telefono</label>
+                <input type="tel" name="tel"><br>
+                <label for="messagio">Messagio</label><br>
+                <textarea name="messagio" rows="15" cols="50"></textarea><br>
+                <label>Accetto le condizioni</label>
+                <input type="checkbox"><br>
+                <input type="submit" value="Invia">
+            </form>
+        </div>
+    </div>
     <footer class="full-row">
         <div class="row">
             <div class="xl3 lg3">Footer 1</div>
