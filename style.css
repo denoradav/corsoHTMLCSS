@@ -400,7 +400,6 @@ img.center{
     float: left;
 }
 
-
 .row-fluid::after{
     content: "";
     display: block;
