@@ -23,11 +23,18 @@ nav{
     border-bottom:#764223 3px solid ;
 }
 
+nav ul{
+    width: 70%;
+    margin: auto;
+}
+
 nav.nav ul li a{
     font-weight: bold;
     padding: 5px;
     font-size: 18px;
     color: #764223; 
+    text-align: center;
+    width: 10%;
 }
 
 nav.nav ul li a:hover{

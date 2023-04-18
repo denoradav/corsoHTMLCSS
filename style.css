@@ -15,9 +15,10 @@ p{ margin: 0;}
 @media screen and (min-width:1260px) {
     .row{
         width: 1260px;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
+    
     .xl1{
         width: 105px;
         box-sizing: border-box;
@@ -190,6 +191,71 @@ p{ margin: 0;}
     
     .lg12{
         width: 1024px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+}
+
+@media screen and (min-width:724px) and (max-width:1024px) {
+    /*griglia basata su 8 colonne*/
+    /*md esiste solo per schermi con dimensioni comprese tra 724 e 1024*/
+
+    .row{
+        width: 724px;
+        margin: 0 auto;
+    }
+
+    .md1{
+        width: 12.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md2{
+        width: 25%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md3{
+        width: 37.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md4{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md5{
+        width: 62.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md6{
+        width: 75%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    .md7{
+        width: 87.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md8{
+        width: 100%;
         box-sizing: border-box;
         padding: 2px;
         float: left;
@@ -405,3 +471,7 @@ img.center{
     display: block;
     clear: both;
 }
+
+
+
+
