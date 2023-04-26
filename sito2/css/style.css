@@ -1,0 +1,477 @@
+/*tag*/
+body{ margin: 0;}
+
+p{ margin: 0;}
+
+/*colonne dello schermo*/
+.full-row{ width: 100%;}
+
+.full-row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@media screen and (min-width:1260px) {
+    .row{
+        width: 1260px;
+        margin: 0 auto;
+    }
+
+    
+    .xl1{
+        width: 105px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl2{
+        width: 210px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl3{
+        width: 315px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl4{
+        width: 420px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+        
+    }
+    
+    .xl5{
+        width: 525px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl6{
+        width: 630px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl7{
+        width: 735px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl8{
+        width: 840px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl9{
+        width: 945px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl10{
+        width: 1050px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl11{
+        width: 1155px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .xl12{
+        width: 1260px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1260px) {
+    .row{
+        width: 1024px;
+        margin: 0 auto; 
+    }
+
+    .lg1{
+        width: 85.333333333px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg2{
+        width: 170.666666667px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg3{
+        width: 256px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg4{
+        width: 341.333333333px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+        
+    }
+    
+    .lg5{
+        width: 426.666666667px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg6{
+        width: 512px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg7{
+        width: 597.333333333px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg8{
+        width: 682.666666667px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg9{
+        width: 768px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg10{
+        width: 853.333333333px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg11{
+        width: 938.666666667px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    
+    .lg12{
+        width: 1024px;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+}
+
+@media screen and (min-width:724px) and (max-width:1024px) {
+    /*griglia basata su 8 colonne*/
+    /*md esiste solo per schermi con dimensioni comprese tra 724 e 1024*/
+
+    .row{
+        width: 724px;
+        margin: 0 auto;
+    }
+
+    .md1{
+        width: 12.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md2{
+        width: 25%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md3{
+        width: 37.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md4{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md5{
+        width: 62.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md6{
+        width: 75%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+    .md7{
+        width: 87.5%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+
+    .md8{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2px;
+        float: left;
+    }
+}
+
+
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+/*float*/
+.clear{clear: both;}
+
+
+/*sfondi colorati*/
+.bg-white{ background-color: #FFF;}
+.bg-green{ background-color: #0F0;}
+.bg-red  { background-color: #F00;}
+.bg-blue { background-color: #00F;}
+.bg-black{ background-color: #000;}
+
+/*colori del testo*/
+.txt-white { color: #FFF}
+.txt-green { color: #0F0;}
+.txt-red   { color: #F00;}
+.txt-blue  { color: #00F;}
+.txt-black { color: #000;}
+
+/*allineamento del testo*/
+.txt-center  {text-align: center;}
+.txt-left    {text-align: left;}
+.txt-right   {text-align: right;}
+.txt-justify {text-align: justify;}
+
+/*decorazione del testo*/
+.txt-bold           {font-weight: bold ;}
+.txt-underlined     {text-decoration: underline;}
+
+/*dimensioni del testo*/
+.big    {font-size: 1.5em;}
+.bigger {font-size: 2em;}
+.jumbo  {font-size: 3em;}
+
+/*margini*/
+.m0  {margin: 0;}
+.ma  {margin: auto;}
+.m0a {margin: 0 auto;}
+
+/*padding*/
+.p5  { padding: 5px;}
+.pt5 { padding-top: 5px;}
+.pr5 { padding-right: 5px;}
+.pb5 { padding-bottom: 5px;}
+.pl5 { padding-left: 5px;}
+
+/*barra di navigazione*/
+nav.nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav.nav ul li{
+    float: left;
+}
+
+nav.nav ul li a{
+    display: block;
+    text-decoration: none;
+}
+
+/*sidebar*/
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li{
+    border: 1px solid;
+    border-top: 0;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar ul li a:hover{
+    background-color: aquamarine;
+
+}
+
+/*immagini*/
+img.small{
+    display: block;
+    width: 25%;
+}
+
+img.medium{
+    display: block;
+    width: 50%;
+}
+
+img.big{
+    display: block;
+    width: 100%;
+}
+
+img.center{
+    display: block;
+    margin: auto;
+}
+
+
+.row-fluid{
+    width: 100%;
+}
+
+.row-fluid .col1{
+    width: 8.333333333%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col2{
+    width: 16.666666667%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col3{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col4{
+    width: 33.33333333%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col5{
+    width: 41.666666667%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col6{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col7{
+    width: 58,333333333%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col8{
+    width: 66.666666667%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col9{
+    width: 75%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col10{
+    width: 83.333333333%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col11{
+    width: 91,666666667%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid .col12{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px;
+    float: left;
+}
+
+.row-fluid::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      .box {
+        height: 450px;
+        width: 450px;
+        border: 10px solid gray;
+        font-size: 5em;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      div.slide {
+        width: 450px;
+        height: 450px;
+        float: left;
+      }
+
+      div.slider{
+        
+      }
+
+      .collegamenti{
+        text-align: center;
+        font-size: 2em;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="box">
+      <div class="slider">
+        <div class="slide">1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+        <div class="slide">4</div>
+        <div class="slide">5</div>
+      </div>
+    </div>
+    <div class="collegamenti">
+        Vai a:
+        <a href="#" onclick="sposta('1')">1</a>
+        <a href="#" onclick="sposta('2')">2</a>
+        <a href="#" onclick="sposta('3')">3</a>
+        <a href="#" onclick="sposta('4')">4</a>
+        <a href="#" onclick="sposta('5')">5</a>
+        
+    </div>
+    <script>
+        let actSlide = 1;
+        function sposta(index){
+            let pos = parseInt(index)-1; //0,1,2,3,4
+            let mt = pos * (-450);
+            let distanza = actSlide - index;
+            distanza = Math.abs(distanza);
+            let time = 500 * distanza;
+            $('div.slider').animate({
+              'margin-top':mt  
+            },time);
+            actSlide = index;
+        }
+    </script>
+  </body>
+</html>
