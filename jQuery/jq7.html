@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid darkblue;
+            margin: 15px;
+            float: left;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        .vNone{
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.box').click(function(){
+                $('.box').addClass('vNone')
+                $(this).removeClass('vNone');
+            })
+
+            $('#mostra').click(function(){
+                $('.box').removeClass('vNone');
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+
+    <div class="clear">
+        <input type="button" id="mostra" value="Mostra">
+    </div>
+</body>
+</html>

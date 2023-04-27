@@ -32,18 +32,23 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-      let actSlide = 1;
-      function sposta(index){
-          let pos = parseInt(index)-1; //0,1,2,3,4
-          let mt = pos * (-450);
-          let distanza = actSlide - index;
-          distanza = Math.abs(distanza);
-          let time = 500 * distanza;
-          $('div.slider').animate({
-            'margin-top':mt  
-          },time);
-          actSlide = index;
-      }
+        $(document).ready(function(){
+            let actSlide = 1;
+            $('.sposta').click(function(){
+                let index = $(this).index()+1
+                console.log(index)
+                let pos = parseInt(index)-1;
+                console.log(index);
+                let mt = pos * (-450);
+                let distanza = actSlide - index;
+                distanza = Math.abs(distanza);
+                let time = 500 * distanza;
+                $('div.slider').animate({
+                    'margin-top':mt  
+                },time);
+                actSlide = index;
+            })
+        })
   </script>
   </head>
   <body>
@@ -58,11 +63,11 @@
     </div>
     <div class="collegamenti">
         Vai a:
-        <a href="#" onclick="sposta('1')">1</a>
-        <a href="#" onclick="sposta('2')">2</a>
-        <a href="#" onclick="sposta('3')">3</a>
-        <a href="#" onclick="sposta('4')">4</a>
-        <a href="#" onclick="sposta('5')">5</a>
+        <a href="#" class="sposta" data-index="1">1</a>
+        <a href="#" class="sposta" data-index="2">2</a>
+        <a href="#" class="sposta" data-index="3">3</a>
+        <a href="#" class="sposta" data-index="4">4</a>
+        <a href="#" class="sposta" data-index="5">5</a>
         
     </div>
     

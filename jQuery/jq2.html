@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      .box {
+        height: 450px;
+        width: 450px;
+        border: 10px solid gray;
+        font-size: 5em;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      div.slide {
+        width: 450px;
+        height: 450px;
+        float: left;
+      }
+
+      div.slider{
+        
+      }
+
+      .collegamenti{
+        text-align: center;
+        font-size: 2em;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let actSlide = 1;
+            $('.sposta1').click(function(){
+                
+                let mt = 0;
+                let distanza = actSlide - 1;
+                distanza = Math.abs(distanza);
+                let time = 500 * distanza;
+                $('div.slider').animate({
+                    'margin-top':mt  
+                },time);
+                actSlide = 1;  
+            })
+
+            $('.sposta2').click(function(){
+                let mt =(-450);
+                let distanza = actSlide - 2;
+                distanza = Math.abs(distanza);
+                let time = 500 * distanza;
+                $('div.slider').animate({
+                    'margin-top':mt  
+                },time);
+                actSlide = 2;  
+            })
+
+            $('.sposta3').click(function(){
+                let pos=2;
+                let mt = pos * (-450);
+                let distanza = actSlide - 3;
+                distanza = Math.abs(distanza);
+                let time = 500 * distanza;
+                $('div.slider').animate({
+                    'margin-top':mt  
+                },time);
+                actSlide = 3;  
+            })
+
+            $('.sposta4').click(function(){
+                let pos=3;
+                let mt = pos * (-450);
+                let distanza = actSlide - 4;
+                distanza = Math.abs(distanza);
+                let time = 500 * distanza;
+                $('div.slider').animate({
+                    'margin-top':mt  
+                },time);
+                actSlide = 4;  
+            })
+
+            $('.sposta5').click(function(){
+                let pos=4;
+                let mt = pos * (-450);
+                let distanza = actSlide - 5;
+                distanza = Math.abs(distanza);
+                let time = 500 * distanza;
+                $('div.slider').animate({
+                    'margin-top':mt  
+                },time);
+                actSlide = 5;  
+            })
+
+
+        })
+      
+      function sposta(index){
+          let pos = parseInt(index)-1; //0,1,2,3,4
+          let mt = pos * (-450);
+          let distanza = actSlide - index;
+          distanza = Math.abs(distanza);
+          let time = 500 * distanza;
+          $('div.slider').animate({
+            'margin-top':mt  
+          },time);
+          actSlide = index;
+      }
+  </script>
+  </head>
+  <body>
+    <div class="box">
+      <div class="slider">
+        <div class="slide">1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+        <div class="slide">4</div>
+        <div class="slide">5</div>
+      </div>
+    </div>
+    <div class="collegamenti">
+        Vai a:
+        <a href="#" class="sposta1">1</a>
+        <a href="#" class="sposta2">2</a>
+        <a href="#" class="sposta3">3</a>
+        <a href="#" class="sposta4">4</a>
+        <a href="#" class="sposta5">5</a>
+        
+    </div>
+    
+  </body>
+</html>

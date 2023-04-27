@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery SlideS</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //aspetta che il documento è stato scaricato tutto
+            $('input.bottone').click(function(){
+                $('.box').fadeOut()//slideDown 
+            })
+            $('input.bottone2').click(function(){
+                $('.box').fadeIn()//slideUp
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <div class="box">
+        ciao sono un box    
+    </div>
+    <div class="box">
+        ciao sono un altro box    
+    </div>
+    <input type="button" class="bottone" value="Sparsci">
+    <input type="button" class="bottone2" value="Appari">
+</body>
+</html>
