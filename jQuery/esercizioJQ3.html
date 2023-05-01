@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let actBox=0;
+            $('.txt-center a.next').click(function(){
+                actBox++;
+                actBox=actBox%5;
+                $('.active').fadeOut(500).removeClass('active');
+                $('.box').eq(actBox).addClass('active').fadeIn(500);
+                console.log(actBox);
+            })
+            $('.txt-center a.prev').click(function(){
+                actBox--;
+                actBox=actBox%5;
+                $('.active').fadeOut(500).removeClass('active');
+                $('.box').eq(actBox).addClass('active').fadeIn(500);
+                console.log(actBox);
+            })
+
+            $('a.vai').click(function(){
+                actBox = $(this).index();
+                $('.active').fadeOut(500).removeClass('active');
+                $('.box').eq(actBox).addClass('active').fadeIn(500);
+            })
+        });
+    </script>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        .boxContainer{
+            position: relative;
+            margin:auto;
+            width: 250px;
+            height: 250px;
+            border: 5px solid saddlebrown
+        }
+
+        .box{
+            position:absolute;
+            width: 250px;
+            height: 250px;
+            font-size: 4em;
+            left:0;
+            top:0;
+            background-color: #eee;
+            display: none;
+            line-height: 250px;
+            text-align: center;
+        }
+
+        .active{
+            display: block;
+        }
+
+        .txt-center{
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxContainer">
+        <div class="box active">1</div> 
+        <div class="box">2</div> 
+        <div class="box">3</div> 
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    
+    <div class="txt-center">
+        <a href="#" class="vai">1</a>
+        <a href="#" class="vai">2</a>
+        <a href="#" class="vai">3</a>
+        <a href="#" class="vai">4</a>
+        <a href="#" class="vai">5</a>
+    </div>
+    <div class="txt-center">
+        <a href="#" class="prev"><<</a>
+        <a href="#" class="next">>></a>
+    </div>
+</body>
+</html>

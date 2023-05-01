@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sposta</title>
+    <style>
+        .container{
+            width: 450px; margin: auto;
+        }
+        .imgBox{
+            width: 350px; height: 350px;
+            overflow: hidden; float: left;
+        }
+        .left,.right{
+            display: block;
+            width: 50px;
+            height: 350px;
+            background-color: orangered;
+            float:left;
+        }
+        .top,.bottom{
+            width: 350px;
+            display: block;
+            margin: auto;
+            background-color: orangered;
+            height: 50px;
+            text-align: center;
+            clear: both;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let ml = 0;
+            let mt = 0;
+            let wh = $('#img').width();
+            let hg = $('#img').height();
+            console.log(wh);
+            $('.left').click(function(){
+                ml = ml - 100;
+                if(-ml>wh-350) ml = -(wh-350);
+                $('.imgBox img').animate({'margin-left':ml})    
+                
+                
+            })
+            $('.top').click(function(){
+                mt = mt - 100;
+                if(-mt>hg-350) mt = -(hg-350); 
+                $('.imgBox img').animate({'margin-top':mt});
+            })
+            $('.right').click(function(){
+                ml = ml + 100;
+                if(ml>0) ml = 0;
+                $('.imgBox img').animate({'margin-left':ml});
+                               
+            })
+            $('.bottom').click(function(){
+                mt = mt + 100;
+                if(mt>0) mt = 0; 
+                $('.imgBox img').animate({'margin-top':mt});
+                               
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a class="top" href="#">SU</a>
+    </div>
+    <div class="container">
+        <a class="left" href="#">SX</a>
+        <div class="imgBox">
+            <img id="img" src="img/istockphoto-1176439818-1024x1024.jpg" alt="colosseo">
+        </div>
+        <a class="right" href="#">DX</a>
+    </div>
+    <div class="container">
+        <a class="bottom" href="#">GIU'</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.txt-center a').click(function(){
+                let index = $(this).index(); //1
+                $('.box').addClass('dNone'); //nascondo tutti i box 
+                $('.box').eq(index).removeClass('dNone') //
+              
+            })
+        });
+    </script>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        .boxContainer{
+            position: relative;
+            margin:auto;
+            width: 250px;
+            height: 250px;
+            border: 5px solid saddlebrown
+        }
+
+        .box{
+            position:absolute;
+            width: 250px;
+            height: 250px;
+            font-size: 3em;
+            left:0;
+            top:0;
+            background-color: #eee;
+
+        }
+
+        .dNone{
+            display: none;
+        }
+
+        .txt-center{
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxContainer">
+        <div class="box primo" data-position="0">1</div> //0
+        <div class="box dNone" data-position="1">2</div> //1
+        <div class="box dNone" data-position="2">3</div> //2
+        <div class="box dNone" data-position="3">4</div>
+        <div class="box dNone" data-position="4">5</div>
+    </div>
+
+    <div class="txt-center">
+        <a href="#" >1</a>
+        <a href="#" >2</a>
+        <a href="#" >3</a>
+        <a href="#" >4</a>
+        <a href="#" >5</a>
+    </div>
+</body>
+</html>
