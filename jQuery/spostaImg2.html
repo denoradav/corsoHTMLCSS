@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sposta</title>
+    <style>
+        body{
+            color: #999;
+            margin: 0;
+        }
+        #main{
+            width: 100%;
+            position: fixed;
+            height: 100%;
+        }
+        #car{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 96px;
+            height: 96px;
+        }
+
+        #buttons{
+            position: fixed;
+            bottom:30px;
+            left: 100px;
+            padding: 10px;
+            background-color: black;
+        }
+
+        #car.up{
+            transform: rotate(270deg);
+        }
+        #car.right{
+            transform: rotate(0deg);
+        }
+        #car.bottom{
+            transform: rotate(90deg);
+        }
+        #car.left{
+            transform: scaleX(-1);
+        }
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let lt=0; let tp=0;
+            let carWh = $('#car').width(); //width car in carWh
+            let carHg = $('#car').height(); //height car in carHg
+            let mainWh = $('#main').width();  //width main in mainWh
+            let mainHg = $('#main').height(); //height main in mainHg
+            let movement = carWh; //la macchina si sposta di un numero di px pari alla sua larghezza
+            $('button.su').click(function(){
+                //ruoto la macchina   
+                $('#car').removeAttr('class').addClass('up');
+                //muovo la macchina
+                tp -= movement; //tp = tp + movement
+                                //sposto la macchina di una dimensione pari a movement
+                                //che è uguale a carWh che è uguale alle dimensione dell'auto
+                if(tp<0) tp=0;  //controllo che l'auto non esca dallo schermo
+                                //se uscisse dallo schermo no la muovo
+                $('#car').animate({ //a presscidere dalla posizione della macchina la muovo
+                    top:tp          //se tp=0 la macchima resta ferma
+                });
+                
+            });
+            $('button.dx').click(function(){
+                //ruoto la macchina    
+                $('#car').removeAttr('class').addClass('right');
+                //muovo la macchina
+                lt += movement; //lt = lt + movement
+                                //sposto la macchina di una dimensione pari a movement
+                                //che è uguale a carWh che è uguale alle dimensione dell'auto
+                if(lt>mainWh) { //mi chiedo se l'auto esce dal lato dx dello schermo
+                    lt=0;       //se esce da lato dx dello schermo la rimetto a sx
+                    $('#car').css({
+                        left:lt
+                    });
+                } else {        // se resta nello schermo la sposto
+                    $('#car').animate({
+                        left:lt
+                    });
+                }    
+                
+            });       
+            $('button.giu').click(function(){
+                //ruoto la macchina    
+                $('#car').removeAttr('class').addClass('bottom');
+                //muovo la macchina
+                tp += movement; //tp = tp + movement
+                if(tp>mainHg){
+                    tp=0;
+                    $('#car').css({
+                        top:tp
+                    });
+                } else {
+                    $('#car').animate({
+                        top:tp
+                    });
+                }
+                
+
+            });  
+            $('button.sx').click(function(){
+                //ruoto la macchina    
+                $('#car').removeAttr('class').addClass('left');
+                //muovo la macchina
+                lt -= movement;
+                if (lt<0) lt=0;
+                $('#car').animate({
+                    left:lt
+                });
+            });  
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="main">
+        <img src="img/icons8-car-96.png" id="car">
+    </div>
+    <div id="buttons">
+        <table>
+            <tr>
+                <td></td>
+                <td><button class="su">SU</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button class="sx">SX</button></td>
+                <td></td>
+                <td><button class="dx">DX</button></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="giu">GIU</button></td>
+                <td></td>
+            </tr>
+        </table>
+        
+        
+        
+        
+        
+        
+    </div>
+</body>
+</html>
