@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Corri Cavallino</title>
+    <style>
+        #horse{
+            display: block;
+        }
+        p.errore{
+            margin: 0;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/jq11.js"></script>
+</head>
+<body>
+<img src="img/icons8-trotting-horse-94.png" alt="Cavallino" id="horse">
+<form>
+    <input type="text" class="corri" size="2">
+    <input type="submit" id="btn" value="Corri" onclick="return false
+    ;">
+    <p class="errore"></p>
+</form>
+</body>
+</html>

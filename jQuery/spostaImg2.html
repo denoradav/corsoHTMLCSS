@@ -49,7 +49,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function(){
-            let lt=0; let tp=0;
+            let lt=0; let tp=0; //cordinate dell veicolo pima del click
             let carWh = $('#car').width(); //width car in carWh
             let carHg = $('#car').height(); //height car in carHg
             let mainWh = $('#main').width();  //width main in mainWh
@@ -116,6 +116,31 @@
                     left:lt
                 });
             });  
+            $('#main').click(function(e){
+                let elm = $(this);
+                //inserisco in lt le cordinate del del nuovo
+                //lefr in cui spostarsi che sono le cordinate
+                //del punto su cui o cliccato meno la metà
+                //delle dimensioni della macchina
+                lt = e.pageX - elm.offset().left - carWh/2;
+                
+                //inserisco in lt le cordinate del del nuovo
+                //lefr in cui spostarsi che sono le cordinate
+                //del punto su cui o cliccato meno la metà
+                //delle dimensioni della macchina
+                tp = e.pageY - elm.offset().top - carHg/2;
+
+                //animo la macchina in modo da raggiungere le nuove
+                //coordinate
+                $('#car').animate({
+                    top:tp,
+                    left:lt 
+                })
+
+                
+
+                //elm.html(xPos + ' ' + yPos);
+            });
         });
         
     </script>
