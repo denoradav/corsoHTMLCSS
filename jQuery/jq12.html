@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 12</title>
+    <style>
+        table{
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        td{
+            width: 75px;
+            height: 75px;
+            border: 2px solid darkred;
+        }
+        td.selected{
+            background-color: #888;
+        }
+        .bg-green{
+            background-color: green;
+        }
+        .bg-blue{
+            background-color: blue;
+        }
+        .bg-orange{
+            background-color: orange;
+        }
+        .bg-teal{
+            background-color: teal;
+        }
+        p{
+            text-align: center;
+        }
+        p.click{
+            margin: 0;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/jq12.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <p>
+        <input type="text" name="num" size="2">
+        <input type="button" id="btn" value="Colora">
+        <input type="button" id="pulisci" value="Pulisci">
+        <input type="button" id="conta" value="Conta">
+        <input type="button" id="inverti" value="Inverti" disabled>
+        
+    </p>
+    <p class="msg"></p>
+    <p class="click bg-blue" data-class="bg-blue">bg-blue</p>
+    <p class="click bg-green" data-class="bg-green">bg-green</p>
+    <p class="click bg-orange" data-class="bg-orange">bg-orange</p>
+    <p class="click bg-teal" data-class="bg-teal">bg-teal</p>
+</body>
+</html>
