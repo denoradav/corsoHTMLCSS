@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fisarmonica</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.box p').slideUp(500);
+            $('.box').click(function(){
+                $('.box p').slideUp(500);
+                $(this).find('p').slideDown(500);
+            })
+        })
+
+    </script>
+    <style>
+        .box{
+            margin: 10px;
+            border: 5px solid #4D9;
+        }
+
+        .box h2{
+            height: 50px;
+            background-color: orange;
+            color: #FFF;
+            margin: 0;
+            padding:5px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Box 1</h2>
+        <p>
+            bla bla bla<br>
+            super bla<br>
+            ancora bla<br>
+            ripetutamente bla<br>
+        </p>
+        
+    </div>
+    <div class="box">
+        <h2>Box 2</h2>
+        <p>
+            bla bla bla<br>
+            super bla<br>
+            ancora bla<br>
+            ripetutamente bla<br>
+        </p>
+    </div>
+    <div class="box">
+        <h2>Box 3</h2>
+        <p>
+            bla bla bla<br>
+            super bla<br>
+            ancora bla<br>
+            ripetutamente bla<br>
+        </p>
+    </div>
+    <div class="box">
+        <h2>Box 4</h2>
+        <p>
+            bla bla bla<br>
+            super bla<br>
+            ancora bla<br>
+            ripetutamente bla<br>
+        </p>
+    </div>
+</body>
+</html>

@@ -21,7 +21,11 @@
     <script>
         $(document).ready(function(){
             $('a').click(function(){
+                //rimuovo la classe active a tutti gli a con classe active
+                //per come è scritto il codice i realtà sempre un a ad 
+                //avere la classe active
                 $('a.active').removeClass('active');
+                //assegno la classe active all'a su cui ho cliccato
                 $(this).addClass('active');
             })
         });
@@ -32,6 +36,6 @@
     <a href="#" class="active">Link 2</a>
     <a href="#">Link 3</a>
     <a href="#">Link 4</a>
-
+    
 </body>
 </html>

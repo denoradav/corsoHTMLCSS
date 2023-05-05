@@ -44,22 +44,32 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function(){
+            //ml e mt ci dicono il marigin-lef e il margin-top attuali
             let ml = 0;
             let mt = 0;
-            let wh = $('#img').width();
-            let hg = $('#img').height();
+            //memorizziamo altezza e larghezza dell'immagine
+            let wh = $('#img').width(); //larghezza img
+            let hg = $('#img').height(); //altezza img
+            //memorizziamo altezza e larghezza del box
+            //che contient l'immagine
             let boxWh = $('.imgBox').width();
             let boxHg = $('.imgBox').height();
-            let movement = 100;
+            let movement = 100; //spostamento dell'immagine
             console.log(wh);
+            $('#img').css({'margin-left':-wh})
+
             $('.left').click(function(){
                 ml = ml - movement;
+                //controllo se il ml è maggiore della 
+                //larghezza massima mostrabile dell'immagine
                 if(-ml>wh-boxWh) ml = -(wh-boxWh);
                 $('.imgBox img').animate({'margin-left':ml})
             });
 
             $('.top').click(function(){
                 mt = mt - movement;
+                //controllo se il mt è maggiore della 
+                //altezza massima mostrabile dell'immagine
                 if(-mt>hg-boxHg) mt = -(hg-boxHg); 
                 $('.imgBox img').animate({'margin-top':mt});
             });

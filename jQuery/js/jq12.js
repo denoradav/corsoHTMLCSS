@@ -1,5 +1,8 @@
 $(document).ready(function(){
     $('#btn').click(function(){
+        //input[attr=val] selezione gli input con attr="val"
+        //in questo caso saranno selezionati gli input con
+        //attributo name="num"
         let num=$('input[name=num]').val();
         if(!isNaN(num) && num<10 && num>0){
             //isNaN(3)=false - isNaN('a')=true
@@ -12,7 +15,7 @@ $(document).ready(function(){
     
 
     $('#inverti').click(function(){
-        //toggleClass(classe) toglie classe a chi la ha 
+        //toggleClass(nomeClasse) toglie nomeClasse a chi la ha 
         //e la aggiunge a chi la mette
         $('td').toggleClass('selected');
     });
@@ -35,22 +38,31 @@ $(document).ready(function(){
     });
     */
     $('#pulisci').click(function(){
+        //leviamo tutte le classi a td rimuovendo
+        //l'atrributo class
         $('td').removeAttr('class');
     });
     
     $('p.click').click(function(){
         //.attr(nome-attr) recupera il valore dell'attributo nome-attr
+        //.attr() con un solo parametro è un getter
+        //prende il valore dell'attributo
         actClass=$(this).attr('data-class');
     })
 
     $('td').click(function(){
-        $(this).attr('class',actClass);    
+        //.attr() con 2 parametri è un setter
+        //imposta un valore
+        $(this).attr('class',actClass); 
+        //equivale a $(this).addClass(actClass); se $(this) non ha classi    
     })
 
     $('p.click').dblclick(function(){
         //il blocco di codice viene eseguito sul doppio click
         actClass=$(this).attr('data-class');
         $('td').removeAttr('class').addClass(actClass);
+        //o in maniera equivalente
+        //$('td').attr('class',actClass); 
     })
 
     

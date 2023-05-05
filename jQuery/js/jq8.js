@@ -10,7 +10,8 @@ $(document).ready(function(){
         let citta = $('input.citta').val();   // citta = Roma
         
         if (nome.length>0 && citta.length>0){
-            //inserisco str dentro #main solo se entrambi i campi sono compilati
+            //inserisco str dentro #main solo se entrambi i campi sono 
+            //compilati
             let str = nome + " abita a " + citta;   //=> David abita a Roma
             $('#main').html(str);
             //

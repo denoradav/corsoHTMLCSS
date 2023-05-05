@@ -33,18 +33,36 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function(){
+            //actSlide contine l'indice a partire da 1 della slide 
+            //attualmente visualizzata 
             let actSlide = 1;
             $('.sposta').click(function(){
+                //index contiene l'html dell'elemento su cui ho cliccato
+                //cioè un valore tra 1 e 5
                 let index = $(this).html();
+                
+                //pos contiene un valore tra 0 e 4
                 let pos = parseInt(index)-1;
+
                 console.log(index);
+                //mt contiene il margin-top a cui devo arrivare
                 let mt = pos * (-450);
+
+                //distanza contiene il numero di slide da scorrere
                 let distanza = actSlide - index;
+                //distanza deve essere >0 
+                //Math.abs(val) ritorna val positivo
                 distanza = Math.abs(distanza);
+                
+                //time contiene il tempo necessario a compiere l'animazione
                 let time = 500 * distanza;
+
+                //eseguo l'animazione
                 $('div.slider').animate({
                     'margin-top':mt  
                 },time);
+
+                //aggiorno actSlide alla slide attuale
                 actSlide = index;
             })
 
