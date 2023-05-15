@@ -1,0 +1,25 @@
+Sito scuola di informatica
+## PRIMA DI REALIZZARE QUALSIASI SITO GUARDARE COSA C'È ONLINE ##
+
+Lista corsi:
+    Almeno tre categorie di corsi e 3 cosri per categoria
+    Sulla pagina di ciascun corso ci deve essere:
+    -> programma
+    -> docente
+    -> form iscrizione al corso
+
+Pagina docenti con lista 3 docenti (foto, nome, materie che insegna)
+Quando clicco su docente vado sulla pagine del docente con bio
+
+Pagina recensioni
+
+I nostri chlienti con logo
+
+Contatti con form che invia mail
+
+Dove siamo
+
+Plugin per newsletter tipo mailpoet e insrire possibilità di iscriversi 
+alla newsletter su hp
+    
+        
