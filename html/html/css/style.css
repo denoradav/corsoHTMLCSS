@@ -1,0 +1,263 @@
+body{
+    margin: 0;
+    background-color: #eee;
+    /*assegnare font e colore font*/
+}
+
+div#container{
+    /*div con id container*/
+    /*viene utilizzato per dare una larghezza al contenuto della pagina*/
+    width: 1024px;
+    margin: auto;
+}
+
+header{
+    /*background-color: blue;
+    background-image: url('../img/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    */
+    min-height: 400px;
+    position: relative;
+}
+
+header h1{
+    margin: 0;
+    padding: 15px 50px;
+    /*text-align: center; funziona solo con elementi con display a blocco*/
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 2px 2px 8px #FF0000;
+    
+}
+
+nav{
+    background-color: #227;
+    /* nero = #000 */
+
+}
+
+nav ul{
+    list-style: none; /*tolgo il pallino dall'ul*/
+    padding-left: 0; /*elimino il paddig left di default dell'HTML*/
+}
+
+nav ul::after{
+    /*ripristino il flusso dell'HTML dopo ul*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul li{
+    /*applico proprietà css a più di un tag*/
+    /*gli li hanno un display a blocco*/
+    float: left;     /*float: left => agganciati il più possibile a sx e lascia libero
+                     lo spazio che avanza a destra*/
+                    /*gli oggetti che flottano hanno una larghezza pari al contenuto */   
+}
+
+nav ul li a{
+    /*definiamo li stile dei link della barra dei menu*/
+    display: block;
+    padding: 5px;
+    text-decoration: none; /*toglie la sottolineatura dai link*/
+    color: #fff; /*equivale a color: white*/
+    border: 2px solid #227;
+    border-right: none;
+}
+
+nav ul li:last-child a{
+    /* le proprietà defiete in questa regola saranno applicate solo
+    all'ultimo elemeno (in questo caso all'a contenuto nell'ultimo li)*/
+    border-right: 2px solid #227;
+}
+
+nav ul li a:hover{
+    /*la pseudo classe hover definsce il comportamento dell'oggetto 
+    al passaggio del mouse*/
+    background-color: #fff;
+    color: #338;
+}
+
+
+nav ul li ul{
+    /*nascondo il sottomenu*/
+    display: none;
+    position: absolute;
+    min-width: 180px;
+}
+
+nav ul li ul li{
+    float: none;
+}
+
+nav ul li ul li a{
+    color: #fff; /*equivale a color: white*/
+    background-color:  #227;
+    border-right: 2px solid #227;
+}
+
+
+
+
+nav ul li:hover ul{
+    /*mostro il sottomenu*/
+    display: block;
+}
+
+
+main, aside{
+    float: left;
+}
+
+main{
+    width: 75%;
+    color: #fff;
+}
+
+aside{
+    width: 25%;
+}
+
+
+
+
+footer{
+    background-color: black;
+    color: #fff;
+}
+
+
+.clear{
+    clear: both;
+}
+
+/*menu responsive*/
+nav div.voce-menu>a{
+    display: none;
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    /*cursor: pointer;*/
+}
+@media screen and (max-width:1024px) {
+    /*dimensione dello schermo<1024*/
+    div#container{width: 98%}
+    
+
+}
+
+@media screen and (min-width:800px) {
+    nav div.voce-menu li.ha-sottomenu>a i{
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    /*dimensioni dello schermo minore di 800*/
+    div#container{width: 98%}
+    
+    
+    nav div.voce-menu>a{
+        display: block;
+    }
+    nav div.voce-menu ul{
+        display: none;
+    }
+    /*
+    valido solo per gli schermi, non va bene per i cellulari
+    nav div.voce-menu:hover>ul{
+        display: block;
+    }
+    */
+
+    nav ul li{
+        float: none;
+    }
+
+    nav ul li ul{
+        display: none;
+        position: static;
+    }
+
+    nav ul li:hover ul{display: none;}
+
+    /*.nav div.voce-menu li.ha-sottomenu a::after{
+        content: '';
+    }*/
+    
+
+}
+
+
+/*slider*/
+#boxSlider{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 1024px;
+}
+
+#boxSlider .left{
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: 0; /*right*/
+    top:0;
+    z-index: 5;
+}
+
+#boxSlider .left:hover{
+    background-image: url('../img/left-arrow.png');
+    background-repeat: no-repeat ;
+    background-position: left center;
+}
+
+#boxSlider .right:hover{
+    background-image: url('../img/right-arrow.png');
+    background-repeat: no-repeat ;
+    background-position: right center;
+}
+
+#boxSlider .navBox{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    transform: translateX(-50%);
+    
+}
+
+#boxSlider .navBox img{
+    cursor: pointer;
+}
+
+
+#boxSlider .right{
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: 5;
+}
+
+
+
+
+#slideContainer{
+    /*deve essere abbastamza grande da contenere tutte le immagini*/
+    width: 4096px; /* = 1024 * 4*/
+}
+
+#slideContainer img{
+    display: block;
+    float: left;
+}
+
+
